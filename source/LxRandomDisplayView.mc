@@ -1,3 +1,4 @@
+import Toybox.Application;
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
@@ -40,6 +41,16 @@ class LxRandomDisplayView extends View {
         _lblOldResult.setLocation(_lblOldResult.locX, _height * 0.8);
         _lblOldResult2.setLocation(_lblOldResult2.locX, _height * 0.9);
         _lblOldResult3.setLocation(_lblOldResult3.locX, _height * 1.05);
+
+        var a = Storage.getValue(LX_S_VIEWSTATE_PREFIX + _type);
+        if (a != null) {
+            _oldResult = a[0];
+            _oldResult2 = a[1];
+            _oldResult3 = a[2];
+            _lblOldResult2.setText(_oldResult3);
+            _lblOldResult.setText(_oldResult2);
+            _lblResult.setText(_oldResult);
+        }
     }
 
     function pushResult(result as String) {
@@ -50,6 +61,7 @@ class LxRandomDisplayView extends View {
         _oldResult3 = _oldResult2;
         _oldResult2 = _oldResult;
         _oldResult = result;
+        Storage.setValue(LX_S_VIEWSTATE_PREFIX + _type, [_oldResult, _oldResult2, _oldResult3]);
 
         WatchUi.animate(_lblOldResult, :locY, WatchUi.ANIM_TYPE_EASE_OUT, _height * 0.7, _height * 0.8, 1, null);
         WatchUi.animate(_lblOldResult2, :locY, WatchUi.ANIM_TYPE_EASE_OUT, _height * 0.8, _height * 0.9, 1, null);
