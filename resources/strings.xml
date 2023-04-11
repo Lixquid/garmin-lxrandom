@@ -1,0 +1,7 @@
+<strings>
+    <string id="AppName">Random Tool</string>
+    <string id="AppVersion">0.1.0</string>
+
+    <string id="CategoryCoinFlip">Coin Flip</string>
+    <string id="CategoryDice">Dice</string>
+</strings>

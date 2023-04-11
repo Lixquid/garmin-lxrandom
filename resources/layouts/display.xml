@@ -1,0 +1,42 @@
+<layout id="Display">
+    <label id="OldResult"
+        text=""
+        x="50%" y="0"
+        color="Graphics.COLOR_WHITE" font="Graphics.FONT_TINY"
+        justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
+    />
+    <label id="OldResult2"
+        text=""
+        x="50%" y="0"
+        color="Graphics.COLOR_WHITE" font="Graphics.FONT_TINY"
+        justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
+    />
+    <label id="OldResult3"
+        text=""
+        x="50%" y="0"
+        color="Graphics.COLOR_WHITE" font="Graphics.FONT_TINY"
+        justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
+    />
+
+    <label id="Type"
+        text=""
+        x="50%" y="10%"
+        color="Graphics.COLOR_WHITE" font="Graphics.FONT_SMALL"
+        justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
+    />
+    <drawable id="ResultBg" />
+    <text-area id="Result"
+        x="0" y="20%" width="100%" height="60%"
+        color="Graphics.COLOR_WHITE"
+        justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
+        text=""
+    >
+        <fonts>
+            <font>Graphics.FONT_LARGE</font>
+            <font>Graphics.FONT_MEDIUM</font>
+            <font>Graphics.FONT_SMALL</font>
+            <font>Graphics.FONT_TINY</font>
+            <font>Graphics.FONT_XTINY</font>
+        </fonts>
+    </text-area>
+</layout>

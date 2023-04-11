@@ -1,0 +1,4 @@
+<resources>
+    <bitmap id="LauncherIcon" filename="drawables/launcher_icon.png" />
+    <drawable-list id="ResultBg" background="Graphics.COLOR_BLACK" x="0" y="25%" width="100%" height="50%" />
+</resources>
