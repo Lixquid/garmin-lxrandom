@@ -18,13 +18,19 @@
         justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
     />
 
+    <drawable id="ResultBg" />
     <label id="Type"
         text=""
         x="50%" y="10%"
         color="Graphics.COLOR_WHITE" font="Graphics.FONT_SMALL"
         justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
     />
-    <drawable id="ResultBg" />
+    <label id="SubType"
+        text=""
+        x="50%" y="25%"
+        color="Graphics.COLOR_LT_GRAY" font="Graphics.FONT_TINY"
+        justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
+    />
     <text-area id="Result"
         x="0" y="20%" width="100%" height="60%"
         color="Graphics.COLOR_WHITE"

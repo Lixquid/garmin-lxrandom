@@ -4,4 +4,14 @@
 
     <string id="CategoryCoinFlip">Coin Flip</string>
     <string id="CategoryDice">Dice</string>
+    <string id="CategoryRange">Range</string>
+    <string id="CategorySettings">Settings</string>
+
+    <string id="SettingsRangeSettings">Range Settings</string>
+    <string id="SettingsRangeMin">Minimum Value</string>
+    <string id="SettingsRangeMax">Maximum Value</string>
+    <string id="SettingsResetAll">Reset all Settings</string>
+    <string id="SettingsResetAllConfirm">Reset ALL Settings?</string>
+    <string id="SettingsResetAllApplied">All Settings Reset</string>
+    <string id="SettingsApplied">Setting Applied</string>
 </strings>

@@ -8,6 +8,8 @@ class LxRandomDisplayView extends View {
     private var _height as Number;
     (:initialized)
     private var _type as String;
+    (:initialized)
+    private var _subType as String;
 
     (:initialized)
     private var _lblResult as Text;
@@ -22,15 +24,17 @@ class LxRandomDisplayView extends View {
     private var _oldResult2 = "";
     private var _oldResult3 = "";
 
-    function initialize(type as String) {
+    function initialize(type as String, subType as String) {
         View.initialize();
         _type = type;
+        _subType = subType;
     }
 
     function onLayout(dc as Dc) {
         setLayout($.Rez.Layouts.Display(dc));
 
         (findDrawableById("Type") as Text).setText(_type);
+        (findDrawableById("SubType") as Text).setText(_subType);
         _height = dc.getHeight();
 
         _lblResult = findDrawableById("Result") as Text;
@@ -42,7 +46,7 @@ class LxRandomDisplayView extends View {
         _lblOldResult2.setLocation(_lblOldResult2.locX, _height * 0.9);
         _lblOldResult3.setLocation(_lblOldResult3.locX, _height * 1.05);
 
-        var a = Storage.getValue(LX_S_VIEWSTATE_PREFIX + _type);
+        var a = Storage.getValue(LX_S_VIEWSTATE_PREFIX + _type + _subType) as Array<String>?;
         if (a != null) {
             _oldResult = a[0];
             _oldResult2 = a[1];
