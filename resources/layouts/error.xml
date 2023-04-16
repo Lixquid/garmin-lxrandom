@@ -1,0 +1,17 @@
+<layout id="Error">
+    <text-area id="String"
+        x="15%" y="15%"
+        width="70%" height="70%"
+        color="Graphics.COLOR_RED"
+        justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER"
+        text=""
+    >
+        <fonts>
+            <font>Graphics.FONT_LARGE</font>
+            <font>Graphics.FONT_MEDIUM</font>
+            <font>Graphics.FONT_SMALL</font>
+            <font>Graphics.FONT_TINY</font>
+            <font>Graphics.FONT_XTINY</font>
+        </fonts>
+    </text-area>
+</layout>

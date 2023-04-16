@@ -10,10 +10,9 @@ class LxRandomSettingsRangeMenuDelegate extends Menu2InputDelegate {
     function onSelect(item as MenuItem) {
         switch (item.getId()) {
             case :min: {
-                var val = Storage.getValue(LX_S_RANGEMIN);
                 var view = new LxRandomNumberPickerView({
                     :title => $.Rez.Strings.SettingsRangeMin,
-                    :initial => val == null ? 0 : val as Number,
+                    :initial => Storage.getValue(LX_S_RANGEMIN),
                     :callback => method(:setMin),
                     :incrementMenu => true,
                 });
@@ -21,10 +20,9 @@ class LxRandomSettingsRangeMenuDelegate extends Menu2InputDelegate {
                 break;
             }
             case :max: {
-                var val = Storage.getValue(LX_S_RANGEMAX);
                 var view = new LxRandomNumberPickerView({
                     :title => $.Rez.Strings.SettingsRangeMax,
-                    :initial => val == null ? 10 : val as Number,
+                    :initial => Storage.getValue(LX_S_RANGEMAX),
                     :callback => method(:setMax),
                     :incrementMenu => true,
                 });

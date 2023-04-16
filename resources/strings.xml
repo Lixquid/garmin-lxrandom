@@ -5,14 +5,25 @@
     <string id="CategoryCoinFlip">Coin Flip</string>
     <string id="CategoryDice">Dice</string>
     <string id="CategoryRange">Range</string>
+    <string id="CategoryString">String</string>
     <string id="CategoryUUID">UUID</string>
     <string id="CategorySettings">Settings</string>
 
     <string id="SettingsRangeSettings">Range Settings</string>
     <string id="SettingsRangeMin">Minimum Value</string>
     <string id="SettingsRangeMax">Maximum Value</string>
+
+    <string id="SettingsStringSettings">String Settings</string>
+    <string id="SettingsStringLength">String Length</string>
+    <string id="SettingsStringIncludeUpper">Include Uppercase</string>
+    <string id="SettingsStringIncludeLower">Include Lowercase</string>
+    <string id="SettingsStringIncludeNumbers">Include Numbers</string>
+    <string id="SettingsStringIncludeSymbols">Include Symbols</string>
+
     <string id="SettingsResetAll">Reset all Settings</string>
     <string id="SettingsResetAllConfirm">Reset ALL Settings?</string>
     <string id="SettingsResetAllApplied">All Settings Reset</string>
     <string id="SettingsApplied">Setting Applied</string>
+
+    <string id="ErrorNoStringCategory">No String Categories enabled!\nEnable a category in Settings.</string>
 </strings>

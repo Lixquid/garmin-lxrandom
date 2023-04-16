@@ -40,6 +40,35 @@ class LxRandomCategoryMenuDelegate extends Menu2InputDelegate {
                 );
                 break;
             }
+            case :string: {
+                if (
+                    !Storage.getValue(LX_S_STRCUPP) &&
+                    !Storage.getValue(LX_S_STRCLOW) &&
+                    !Storage.getValue(LX_S_STRCNUM) &&
+                    !Storage.getValue(LX_S_STRCSYM)
+                ) {
+                    WatchUi.pushView(new LxRandomErrorView(WatchUi.loadResource($.Rez.Strings.ErrorNoStringCategory)), null, SLIDE_LEFT);
+                    break;
+                }
+                var view = new LxRandomDisplayView(WatchUi.loadResource($.Rez.Strings.CategoryString), "");
+                WatchUi.pushView(
+                    view,
+                    new LxRandomDisplayViewDelegate(
+                        view,
+                        new LxRandomGeneratorString(
+                            Storage.getValue(LX_S_STRLEN),
+                            (
+                                (Storage.getValue(LX_S_STRCUPP) ? LX_STRINGCATEGORY_UPPER : 0) |
+                                    (Storage.getValue(LX_S_STRCLOW) ? LX_STRINGCATEGORY_LOWER : 0) |
+                                    (Storage.getValue(LX_S_STRCNUM) ? LX_STRINGCATEGORY_NUMBERS : 0) |
+                                    (Storage.getValue(LX_S_STRCSYM) ? LX_STRINGCATEGORY_SYMBOLS : 0)
+                            ) as LX_STRINGCATEGORY
+                        )
+                    ),
+                    SLIDE_LEFT
+                );
+                break;
+            }
             case :uuid: {
                 var view = new LxRandomDisplayView(WatchUi.loadResource($.Rez.Strings.CategoryUUID), "");
                 WatchUi.pushView(view, new LxRandomDisplayViewDelegate(view, new LxRandomGeneratorUUID()), SLIDE_LEFT);
@@ -58,6 +87,7 @@ function lxCreateCategoryMenu() as Menu2 {
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryCoinFlip), null, :coinFlip, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryDice), null, :dice, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryRange), null, :range, null));
+    menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryString), null, :string, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryUUID), null, :uuid, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategorySettings), null, :settings, null));
     return menu;

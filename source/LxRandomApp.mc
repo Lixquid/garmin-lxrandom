@@ -7,6 +7,7 @@ class LxRandomApp extends AppBase {
     function initialize() {
         AppBase.initialize();
         Math.srand(System.getTimer());
+        lxInitializeSettings();
     }
 
     function getInitialView() {
