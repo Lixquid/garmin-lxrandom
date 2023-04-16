@@ -40,6 +40,11 @@ class LxRandomCategoryMenuDelegate extends Menu2InputDelegate {
                 );
                 break;
             }
+            case :uuid: {
+                var view = new LxRandomDisplayView(WatchUi.loadResource($.Rez.Strings.CategoryUUID), "");
+                WatchUi.pushView(view, new LxRandomDisplayViewDelegate(view, new LxRandomGeneratorUUID()), SLIDE_LEFT);
+                break;
+            }
             case :settings: {
                 WatchUi.pushView(lxCreateSettingsMenu(), new LxRandomSettingsMenuDelegate(), SLIDE_LEFT);
                 break;
@@ -53,6 +58,7 @@ function lxCreateCategoryMenu() as Menu2 {
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryCoinFlip), null, :coinFlip, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryDice), null, :dice, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryRange), null, :range, null));
+    menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategoryUUID), null, :uuid, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.CategorySettings), null, :settings, null));
     return menu;
 }

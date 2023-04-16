@@ -5,6 +5,7 @@
     <string id="CategoryCoinFlip">Coin Flip</string>
     <string id="CategoryDice">Dice</string>
     <string id="CategoryRange">Range</string>
+    <string id="CategoryUUID">UUID</string>
     <string id="CategorySettings">Settings</string>
 
     <string id="SettingsRangeSettings">Range Settings</string>
