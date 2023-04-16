@@ -65,7 +65,7 @@ class LxRandomDisplayView extends View {
         _oldResult3 = _oldResult2;
         _oldResult2 = _oldResult;
         _oldResult = result;
-        Storage.setValue(LX_S_VIEWSTATE_PREFIX + _type, [_oldResult, _oldResult2, _oldResult3]);
+        Storage.setValue(LX_S_VIEWSTATE_PREFIX + _type + _subType, [_oldResult, _oldResult2, _oldResult3]);
 
         WatchUi.animate(_lblOldResult, :locY, WatchUi.ANIM_TYPE_EASE_OUT, _height * 0.7, _height * 0.8, 1, null);
         WatchUi.animate(_lblOldResult2, :locY, WatchUi.ANIM_TYPE_EASE_OUT, _height * 0.8, _height * 0.9, 1, null);
