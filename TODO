@@ -2,6 +2,8 @@
 
 - Numeric numbers
     - Multiple, keep high / keep low, addition
+- Convert dice to use range generator
+- Support numeric maximum / minimum highlighting
 - History
 - Save Result
 - Send Result to Note app
