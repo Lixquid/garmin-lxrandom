@@ -20,6 +20,8 @@
     <string id="SettingsStringIncludeNumbers">Include Numbers</string>
     <string id="SettingsStringIncludeSymbols">Include Symbols</string>
 
+    <string id="SettingsShowPastResults">Show Past Results</string>
+
     <string id="SettingsResetAll">Reset all Settings</string>
     <string id="SettingsResetAllConfirm">Reset ALL Settings?</string>
     <string id="SettingsResetAllApplied">All Settings Reset</string>

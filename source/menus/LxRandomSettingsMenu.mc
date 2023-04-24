@@ -32,13 +32,16 @@ class LxRandomSettingsMenuDelegate extends Menu2InputDelegate {
             case :string:
                 WatchUi.pushView(lxCreateStringSettingsMenu(), new LxRandomSettingsStringMenuDelegate(), SLIDE_LEFT);
                 break;
-            case :resetAll: {
+            case :showPastResults:
+                Storage.setValue(LX_S_GENPASTRES, !Storage.getValue(LX_S_GENPASTRES));
+                break;
+            case :resetAll:
                 WatchUi.pushView(
                     new WatchUi.Confirmation(WatchUi.loadResource($.Rez.Strings.SettingsResetAllConfirm)),
                     new LxRandomSettingsMenuResetAllDelegate(),
                     SLIDE_LEFT
                 );
-            }
+                break;
         }
     }
 }
@@ -47,6 +50,15 @@ function lxCreateSettingsMenu() as Menu2 {
     var menu = new Menu2({ :title => WatchUi.loadResource($.Rez.Strings.CategorySettings) });
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.SettingsRangeSettings), null, :range, null));
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.SettingsStringSettings), null, :string, null));
+    menu.addItem(
+        new ToggleMenuItem(
+            WatchUi.loadResource($.Rez.Strings.SettingsShowPastResults),
+            null,
+            :showPastResults,
+            Storage.getValue(LX_S_GENPASTRES),
+            null
+        )
+    );
     menu.addItem(new MenuItem(WatchUi.loadResource($.Rez.Strings.SettingsResetAll), null, :resetAll, null));
     menu.addItem(
         new MenuItem(

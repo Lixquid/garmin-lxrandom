@@ -51,16 +51,20 @@ class LxRandomDisplayView extends View {
             _oldResult = a[0];
             _oldResult2 = a[1];
             _oldResult3 = a[2];
-            _lblOldResult2.setText(_oldResult3);
-            _lblOldResult.setText(_oldResult2);
+            if (Storage.getValue(LX_S_GENPASTRES)) {
+                _lblOldResult2.setText(_oldResult3);
+                _lblOldResult.setText(_oldResult2);
+            }
             _lblResult.setText(_oldResult);
         }
     }
 
     function pushResult(result as String) {
-        _lblOldResult3.setText(_oldResult3);
-        _lblOldResult2.setText(_oldResult2);
-        _lblOldResult.setText(_oldResult);
+        if (Storage.getValue(LX_S_GENPASTRES)) {
+            _lblOldResult3.setText(_oldResult3);
+            _lblOldResult2.setText(_oldResult2);
+            _lblOldResult.setText(_oldResult);
+        }
         _lblResult.setText(result);
         _oldResult3 = _oldResult2;
         _oldResult2 = _oldResult;
