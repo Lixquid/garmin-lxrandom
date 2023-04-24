@@ -1,6 +1,7 @@
 import Toybox.Application;
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.System;
 import Toybox.WatchUi;
 
 class LxRandomDisplayView extends View {
@@ -33,8 +34,14 @@ class LxRandomDisplayView extends View {
     function onLayout(dc as Dc) {
         setLayout($.Rez.Layouts.Display(dc));
 
-        (findDrawableById("Type") as Text).setText(_type);
-        (findDrawableById("SubType") as Text).setText(_subType);
+        var type = findDrawableById("Type") as Text;
+        var subType = findDrawableById("SubType") as Text;
+        if (System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_SEMI_OCTAGON) {
+            type.setLocation(dc.getWidth() / 3, dc.getHeight() * 0.1);
+            subType.setLocation(dc.getWidth() / 3, dc.getHeight() * 0.25);
+        }
+        type.setText(_type);
+        subType.setText(_subType);
         _height = dc.getHeight();
 
         _lblResult = findDrawableById("Result") as Text;
