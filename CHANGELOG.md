@@ -1,3 +1,9 @@
+# Version 0.1.1
+
+- Added Show Past Results setting (#1)
+- Fix generated type being cut off on Octagon displays (#2)
+- Fix error view being too small on square-ish displays
+
 # Version 0.1.0
 
 - Added Coin Flip generator

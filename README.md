@@ -28,6 +28,8 @@ Settings can only be adjusted on the device.
   - Sets the number of characters generated strings will include
 - String Include Categories
   - Sets which kinds of characters will be included in generated strings.
+- Show Past Results
+  - If set, the last 2 generated values will be displayed below the main result.
 
 <details>
 <summary>Developer Documentation</summary>
