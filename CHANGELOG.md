@@ -1,3 +1,7 @@
+# Version 0.1.2
+
+- Fix RNG not being very random at app initialization
+
 # Version 0.1.1
 
 - Added Show Past Results setting (#1)
