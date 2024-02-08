@@ -1,3 +1,7 @@
+# Version 0.1.3
+
+- Add support for newer devices
+
 # Version 0.1.2
 
 - Fix RNG not being very random at app initialization
